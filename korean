@@ -1,318 +1,539 @@
--- Translated by honsal (http://www.noxiousnet.com/forums/index.php?action=profile;u=6435)
+--[[
+English is the standard language that you should base your ID's off of.
+If something isn't found in your language file then it will fall back to English.
 
-translate.AddLanguage("ko", "Korean")
+Valid languages (from gmod's menu): bg cs da de el en en-PT es-ES et fi fr ga-IE he hr hu it ja ko lt nl no pl pt-BR pt-PT ru sk sv-SE th tr uk vi zh-CN zh-TW
+You MUST use one of the above when using translate.AddLanguage
+]]
 
-LANGUAGE.minute_points_added						= "1분 동안 데미지를 받지 않아 %d포인트를 얻었다!"
-LANGUAGE.infliction_reached_class_unlocked			= "%d%%의 인간이 감염되어 %s이(가) 풀려났다!"
-LANGUAGE.infliction_reached							= "인간 중 %d%%가 먹혔다!"
-LANGUAGE.x_unlocked									= "%s이(가) 풀려났다!"
-LANGUAGE.disconnect_killed							= "%s이(가) %s에게 살해당해 빡종해버렸다."
-LANGUAGE.nail_removed_by							= "%s이(가) %s의 못을 뺐다."
-LANGUAGE.banned_for_life_warning					= "현재 생활이 금지당한 생태라서 아무것도 살 수 없어!"
-LANGUAGE.need_to_be_near_arsenal_crate				= "아이템을 구매하려면 상점 상자가 근처에 있어야 한다!"
-LANGUAGE.cant_purchase_right_now					= "지금은 아무것도 구매할 수 없다."
-LANGUAGE.dont_have_enough_points					= "포인트가 부족하다."
-LANGUAGE.prepare_yourself							= "습격에 대비하자..."
-LANGUAGE.purchased_x_for_y_points					= "%s을(를) %d포인트에 구매했다!"
-LANGUAGE.give_time_before_suicide					= "자살하기 전에, 팀원이 대비할 시간을 줘라."
-LANGUAGE.no_spare_ammo_to_give						= "여분의 탄창이 없다!"
-LANGUAGE.no_person_in_range							= "범위 안에 사람이 없다!"
-LANGUAGE.that_life									= "일생동안..."
-LANGUAGE.x_damage_to_barricades						= "%d 데미지를 바리케이드에 가함"
-LANGUAGE.x_damage_to_humans							= "%d 데미지를 인간에게 가함"
-LANGUAGE.x_brains_eaten								= "%d개의 뇌를 먹어치움"
-LANGUAGE.press_rmb_to_cycle_targets					= "오른쪽 클릭으로 타겟 변경"
-LANGUAGE.press_lmb_to_spawn_on_them					= "왼쪽 클릭으로 이 위치에서 부활"
-LANGUAGE.press_lmb_to_spawn							= "왼쪽 클릭으로 부활"
-LANGUAGE.observing_x								= "관칠 중: %s (%d)"
-LANGUAGE.waiting_for_next_wave						= "다음 웨이브가 시작되길 기다리는 중..."
-LANGUAGE.impossible									= "불가능하다."
-LANGUAGE.trying_to_put_nails_in_glass				= "맙소사! 내가 유리에 못을 박으려 했어!"
+--[[
+RULES FOR TRANSLATORS!!
+* Only translate formally. Do not translate with slang, improper grammar, spelling, etc.
+* Do not translate proper things. For example, do not translate Zombie Survival (the name of the game). Do translate "survive the zombies".
+  For names of weapons, you would translate only the "Handgun" part of 'Peashooter' Handgun (and the quotes if your language doesn't use ' as quotes)
+  For names of classes, you would translate Bloated Zombie to whatever the word for Bloated and Zombie are. But you wouldn't translate Pukepus or Bonemesh.
+* Comment out things that you have not yet translated in your language file.
+  It will then fall back to this file instead of potentially using out of date wording in yours.
+]]
 
-LANGUAGE.boss_class_select							= "다음부터는 %s(으)로 부활하게 된다."
-LANGUAGE.person_has_weapon							= "이미 그 무기를 가지고 있다."
-LANGUAGE.cant_do_that_in_classic_mode				= "클래식 모드에선 불가능하다."
-LANGUAGE.cant_use_x_in_classic_mode					= "클래식 모드에선 %s을(를) 사용할 수 없다."
-LANGUAGE.cant_use_x_in_zombie_escape				= "좀비 탈출에서는 %s을(를) 사용할 수 없다."
-LANGUAGE.no_class_switch_in_this_mode				= "현재 모드는 클래스 변경을 지원하지 않는다."
-LANGUAGE.press_sprint_to_get_up						= "달리기 키를 눌러 일어남"
-LANGUAGE.zombie_escape								= "[좀비 탈출]"
-LANGUAGE.nothing_for_this_ammo						= "이 탄환을 사용할 수 있는 총기가 없다."
-LANGUAGE.you_decide_to_leave_some					= "팀원을 위해 남겨두기로 정했다."
-LANGUAGE.you_cant_purchase_now						= "지금은 아무것도 구매할 수 없다."
-LANGUAGE.no_ammo_here								= "아직 탄약이 준비되지 않았다."
-LANGUAGE.you_redeemed								= "성불!"
-LANGUAGE.kill_the_last_human						= "마지막 인간을 죽여!"
-LANGUAGE.kick_the_last_human						= "마지막 인간을 죽여버려!"
-LANGUAGE.you_are_the_last_human						= "네가 인간의 마지막 희망이야!"
-LANGUAGE.x_zombies_out_to_get_you					= "%d마리의 좀비가 널 잡기 위해 달려온다!"
-LANGUAGE.x_pants_out_to_get_you						= "%d마리의 망할 시체가 너에게 다가온다!"
-LANGUAGE.you_have_died								= "죽음."
-LANGUAGE.you_were_killed_by_x						= "%s에게 살해당함"
-LANGUAGE.you_were_kicked_by_x						= "%s이(가) 정강이를 걷어참"
-LANGUAGE.arsenal_upgraded							= "무기고에 추가됨"
-LANGUAGE.final_wave									= "마지막 웨이브가 시작되었다!"
+translate.AddLanguage("en", "English")
 
-LANGUAGE.final_wave_sub								= "모든 좀비가 풀려났고, 이제부터 성불할 수 없다!"
-LANGUAGE.wave_x_has_begun							= "%d번째 웨이브가 시작됐다!"
-LANGUAGE.x_unlocked									= "%s이(가) 풀려났다!"
-LANGUAGE.wave_x_is_over								= "%d번째 웨이브가 끝났다."
+-- Various gamemode stuff
+LANGUAGE.minute_points_added						= "No damage received for a whole minute! Added %d points."
+LANGUAGE.infliction_reached_class_unlocked			= "%d%% infliction has been reached! %s unlocked!"
+LANGUAGE.infliction_reached							= "%d%% of humans have died!"
+LANGUAGE.x_unlocked									= "%s unlocked!"
+LANGUAGE.disconnect_killed							= "%s was disconnect killed by %s."
+LANGUAGE.nail_removed_by							= "%s removed a nail belonging to %s."
+LANGUAGE.banned_for_life_warning					= "You have the Banned for Life skill active so you can't purchase anything!"
+LANGUAGE.late_buyer_warning							= "You have the Late Buyer skill active so you can't purchase anything until the second half!"
+LANGUAGE.late_buyer_finished						= "The late buyer period has finished. You can now purchase items from the arsenal."
+LANGUAGE.need_to_be_near_arsenal_crate				= "You need to be near an Arsenal Crate to purchase items!"
+LANGUAGE.need_to_be_near_remantler					= "You need to be near a Remantler!"
+LANGUAGE.cant_purchase_right_now					= "You can't purchase anything right now."
+LANGUAGE.dont_have_enough_points					= "You don't have enough points."
+LANGUAGE.need_to_have_enough_scrap					= "You don't have enough scrap."
+LANGUAGE.cannot_dismantle							= "You cannot dismantle this item."
+LANGUAGE.prepare_yourself							= "Prepare yourself..."
+LANGUAGE.purchased_x_for_y_points					= "Purchased %s for %d points!"
+LANGUAGE.created_x_for_y_scrap						= "Created %s for %d scrap!"
+LANGUAGE.give_time_before_suicide					= "Give others time to spawn before suiciding."
+LANGUAGE.no_spare_ammo_to_give						= "No spare ammo to give!"
+LANGUAGE.no_person_in_range							= "No person in range!"
+LANGUAGE.that_life									= "That life..."
+LANGUAGE.x_damage_to_barricades						= "%d damage to barricades"
+LANGUAGE.x_damage_to_humans							= "%d damage to humans"
+LANGUAGE.x_brains_eaten								= "%d brains eaten"
 
-LANGUAGE.wave_x_is_over_sub							= "좀비들의 습격이 지연됐고, 상점에서 %d%% 할인된 가격으로 물품을 판매중이다."
-LANGUAGE.you_are_x									= "%s(으)로 부활했다!"
-LANGUAGE.x_has_risen_as_y							= "%s이(가) %s(으)로 부활했다!!"
-LANGUAGE.x_has_risen								= "%s이(가) 나타났다!"
-LANGUAGE.cant_use_worth_anymore						= "더는 자금을 사용할 수 없다!"
-LANGUAGE.class_not_unlocked_will_be_unlocked_x		= "해당 좀비는 아직 풀려나지 않았다. %d웨이브 이후에 풀려난다."
-LANGUAGE.you_are_already_a_x						= "이미 %s이다."
-LANGUAGE.you_will_spawn_as_a_x						= "이제 %s(으)로 부활한다."
-LANGUAGE.crafting_successful						= "조합 성공!"
-LANGUAGE.x_crafted_y								= "%s이(가) %s을(를) 조합했다."
-LANGUAGE.escape_from_the_zombies					= "좀비로부터 탈출하라!"
-LANGUAGE.too_close_to_another_nail					= "다른 못이 너무 가까이 있다."
-LANGUAGE.object_too_damaged_to_be_used				= "그 물건은 다시 사용하기에 너무 훼손됐다."
-LANGUAGE.thanks_for_being_a_fan_of_zs				= "좀비 서바이벌의 팬이 되어주셔서 감사한다!"
-LANGUAGE.cant_remove_nails_of_superior_player		= "더 뛰어난 플레이어의 못은 제거할 수 없다."
+LANGUAGE.press_jump_to_free_roam					= "Press JUMP to free roam"
+LANGUAGE.press_rmb_to_cycle_targets					= "Press RMB to cycle targets"
+LANGUAGE.press_lmb_to_spawn_on_them					= "Press LMB to spawn on them"
+LANGUAGE.press_lmb_to_spawn							= "Press LMB to spawn randomly"
+LANGUAGE.press_reload_to_spawn_far					= "Press RELOAD to spawn far away from survivors"
+LANGUAGE.press_alt_nest_menu						= "Press ALT to open the nest menu/spawn on minions"
+LANGUAGE.press_reload_to_spawn_at_normal_point		= "Press RELOAD to spawn at a normal spawn point"
+LANGUAGE.press_walk_to_spawn_as_x					= "Press %s to spawn as a %s"
+LANGUAGE.press_rmb_to_spawn_close					= "Press RMB to spawn close to survivors"
+LANGUAGE.press_left_and_right_to_cycle_targets		= "Press STRAFE LEFT and STRAFE RIGHT to cycle targets"
+
+LANGUAGE.observing_x								= "Observing %s (%d)"
+LANGUAGE.observing_x_simple							= "Observing %s"
+LANGUAGE.waiting_for_next_wave						= "Waiting for the next wave to begin..."
+LANGUAGE.impossible									= "Impossible."
+LANGUAGE.trying_to_put_nails_in_glass				= "Trying to put nails in glass is a silly thing to do."
+LANGUAGE.boss_class_select							= "You will be %s the next time you're a boss zombie."
+LANGUAGE.person_has_weapon							= "They already have that weapon."
+LANGUAGE.cant_do_that_in_classic_mode				= "You can't do that in Classic Mode."
+LANGUAGE.cant_use_x_in_classic_mode					= "You can't use %s in Classic Mode."
+LANGUAGE.cant_use_x_in_zombie_escape				= "You can't use %s in Zombie Escape."
+LANGUAGE.no_class_switch_in_this_mode				= "The current mode doesn't allow you to switch classes."
+LANGUAGE.press_sprint_to_get_up						= "Press SPRINT to get up"
+LANGUAGE.zombie_escape								= "Zombie Escape!"
+LANGUAGE.nothing_for_this_ammo						= "You don't have anything that uses this type of ammo."
+LANGUAGE.you_decide_to_leave_some					= "You decide to leave some for your team."
+LANGUAGE.you_cant_purchase_now						= "You can't purchase items right now."
+LANGUAGE.no_ammo_here								= "There's no ammo here right now."
+LANGUAGE.you_redeemed								= "You have redeemed!"
+LANGUAGE.x_redeemed									= "%s has redeemed!"
+LANGUAGE.kill_the_last_human						= "Kill the last human!"
+LANGUAGE.kick_the_last_human						= "Kick the last human!"
+LANGUAGE.you_are_the_last_human						= "YOU ARE THE LAST HUMAN!"
+LANGUAGE.x_zombies_out_to_get_you					= "%d ZOMBIES ARE OUT TO GET YOU!"
+LANGUAGE.x_pants_out_to_get_you						= "%d PANTS ARE OUT TO GET YOU!"
+LANGUAGE.you_have_died								= "You have died."
+LANGUAGE.you_were_killed_by_x						= "You were killed by %s"
+LANGUAGE.you_were_kicked_by_x						= "You were kicked in the shins by %s"
+LANGUAGE.arsenal_upgraded							= "Arsenal Upgraded"
+LANGUAGE.final_wave									= "THE FINAL WAVE HAS BEGUN!"
+LANGUAGE.final_wave_sub								= "ALL classes unlocked and the chance for redemption has ended!"
+LANGUAGE.wave_x_has_begun							= "Wave %d has begun!"
+LANGUAGE.x_unlocked									= "%s unlocked!"
+LANGUAGE.wave_x_is_over								= "Wave %d is over!"
+LANGUAGE.wave_x_is_over_sub							= "The Undead have stopped rising."
+LANGUAGE.points_for_surviving						= "You've gained %d points for surviving."
+LANGUAGE.scrap_for_surviving						= "You've gained %d scrap for surviving."
+LANGUAGE.you_are_x									= "You are %s!"
+LANGUAGE.x_has_risen_as_y							= "%s has risen as %s!!"
+LANGUAGE.x_has_risen								= "A boss zombie has risen!"
+LANGUAGE.x_has_been_slain_as_y						= "%s has been slain as %s!"
+LANGUAGE.cant_use_worth_anymore						= "You can't use the Worth menu any more!"
+LANGUAGE.class_not_unlocked_will_be_unlocked_x		= "That class is not unlocked yet. It will be unlocked at the start of wave %d."
+LANGUAGE.you_are_already_a_x						= "You are already a %s."
+LANGUAGE.you_will_spawn_as_a_x						= "You will spawn as a %s."
+LANGUAGE.crafting_successful						= "Crafting successful!"
+LANGUAGE.x_crafted_y								= "%s crafted %s."
+LANGUAGE.escape_from_the_zombies					= "Escape from the zombies!"
+LANGUAGE.too_close_to_another_nail					= "Too close to another nail."
+LANGUAGE.object_too_damaged_to_be_used				= "That object is too damaged to be used anymore."
+LANGUAGE.thanks_for_being_a_fan_of_zs				= "Thanks for being a fan of Zombie Survival!"
+LANGUAGE.cant_remove_nails_of_superior_player		= "You can't remove the nails of a player with the barricade expert skill because you don't also have the skill."
 LANGUAGE.x_turned_on_noclip							= "%s turned on noclip."
 LANGUAGE.x_turned_off_noclip						= "%s turned off noclip."
-LANGUAGE.unlocked_on_wave_x							= "%d웨이브에 풀려난다."
-LANGUAGE.brains_eaten_x								= "먹어치운 뇌: %s개"
-LANGUAGE.points_x									= "포인트: %s포인트"
-LANGUAGE.next_wave_in_x								= "다음 웨이브까지: %s초"
-LANGUAGE.wave_ends_in_x								= "웨이브가 끝나기까지: %s초"
-LANGUAGE.wave_x_of_y								= "%d웨이브 중 %d웨이브"
-LANGUAGE.zombie_invasion_in_x						= "좀비들의 습격까지: %s초"
-LANGUAGE.intermission								= "휴식 시간"
-LANGUAGE.press_f2_for_the_points_shop				= "F2를 눌러 상점 사용!"
-LANGUAGE.breath										= "O2"
-LANGUAGE.zombie_volunteers							= "좀비 지원자 목록"
-LANGUAGE.x_discount_for_buying_between_waves		= "웨이브 사이엔 %d 할인된 가격으로 판매한다!"
-LANGUAGE.number_of_initial_zombies_this_game		= "이번 라운드 시작 시 습격할 좀비 수 (%d%%): %d마리"
-LANGUAGE.humans_closest_to_spawns_are_zombies		= "좀비 스폰 지역에 가까운 인간이 좀비가 된다."
-LANGUAGE.waiting_for_players						= "플레이어 기다리는 중..."
-LANGUAGE.requires_x_people							= "%d명이 필요함"
-LANGUAGE.packing_others_object						= "다른 사람의 물건 집는 중"
-LANGUAGE.packing									= "집는 중"
-LANGUAGE.ze_humans_are_frozen_until_x				= "라운드 시작 전 %d초까지 얼음 상태."
-LANGUAGE.loading									= "로딩 중..."
-LANGUAGE.next_round_in_x							= "다음 라운드까지: %s"
-LANGUAGE.warning									= "경고!"
-LANGUAGE.ok_and_no_reminder							= "응, 다시 띄우지 마"
+LANGUAGE.unlocked_on_wave_x							= "Unlocked on wave %d"
+LANGUAGE.brains_eaten_x								= "Brains eaten: %s"
+LANGUAGE.points_x									= "Points: %s"
+LANGUAGE.next_wave_in_x								= "Next wave in %s"
+LANGUAGE.wave_ends_in_x								= "Wave ends in %s"
+LANGUAGE.wave_x_of_y								= "Wave %d of %d"
+LANGUAGE.round_x_of_y								= "Round %d of %d"
+LANGUAGE.zombie_invasion_in_x						= "Zombie invasion in %s"
+LANGUAGE.intermission								= "Intermission"
+LANGUAGE.press_f2_for_the_points_shop				= "Press F2 for the Points Shop!"
+LANGUAGE.breath										= "Breath"
+LANGUAGE.zombie_volunteers							= "Zombie Volunteers"
+LANGUAGE.x_will_be_y_soon							= "%s will become %s soon!"
+LANGUAGE.you_will_be_x_soon							= "You will become %s soon!"
+LANGUAGE.x_discount_for_buying_between_waves		= "%d%% discount for buying between waves!"
+LANGUAGE.number_of_initial_zombies_this_game		= "Number of initial zombies this game (%d%%): %d"
+LANGUAGE.humans_closest_to_spawns_are_zombies		= "The humans closest to the zombie spawns will start as zombies."
+LANGUAGE.waiting_for_players						= "Waiting for players..."
+LANGUAGE.requires_x_people							= "Requires %d people"
+LANGUAGE.packing_others_object						= "Packing other person's object"
+LANGUAGE.packing									= "Packing"
+LANGUAGE.ze_humans_are_frozen_until_x				= "Humans are frozen until %d seconds before the round starts."
+LANGUAGE.loading									= "Loading..."
+LANGUAGE.next_round_in_x							= "Next round in: %s"
+LANGUAGE.warning									= "Warning!"
+LANGUAGE.ready										= "Ready"
+LANGUAGE.ok_and_no_reminder							= "OK and don't pop this message up anymore"
+LANGUAGE.classic_mode_warning						= "This server is running Zombie Survival in 'Classic Mode'\nClassic Mode is a setting which greatly alters gameplay. Things that are changed:\n* No selection of zombie classes. Everyone uses the Classic Zombie class\n* No barricading tools such as nailing or turrets\n* More but faster waves\n\nThis is NOT original Zombie Survival!\n\n-- Servers which run classic mode will display CLASSIC MODE in the bottom left of the screen --"
+LANGUAGE.classic_mode								= "CLASSIC MODE"
+LANGUAGE.resist_x									= "Resist: %d%%"
+LANGUAGE.right_click_to_hammer_nail					= "Right click to hammer in a nail."
+LANGUAGE.nails_x									= "Nails: %d"
+LANGUAGE.resupply_box								= "Resupply Box"
+LANGUAGE.purchase_now								= "Purchase now!"
+LANGUAGE.integrity_x								= "Integrity: %d%%"
+LANGUAGE.empty										= "EMPTY"
+LANGUAGE.manual_control								= "MANUAL CONTROL"
+LANGUAGE.arsenal_crate								= "Arsenal Crate"
+LANGUAGE.not_enough_room_for_a_nest					= "Not enough room here for a nest!"
+LANGUAGE.too_close_to_another_nest					= "Too close to another nest!"
+LANGUAGE.nest_created								= "Nest created! Finish building to enable spawning here."
+LANGUAGE.nest_built_by_x							= "A Flesh Creeper nest has been built by %s and is now a spawn point."
+LANGUAGE.nest_destroyed								= "A Flesh Creeper nest has been destroyed."
+LANGUAGE.wait_x_seconds_before_making_a_new_nest	= "You must wait %d more seconds before creating a new nest."
+LANGUAGE.too_close_to_a_human						= "Too close to a human!"
+LANGUAGE.too_close_to_a_spawn						= "Too close to a zombie spawn!"
+LANGUAGE.too_close_to_uncorrupt						= "Too close to an uncorrupted sigil!"
+LANGUAGE.x_has_built_this_nest_and_is_still_around	= "%s has built this nest and is still around, so you can't demolish it."
+LANGUAGE.no_other_nests								= "You can't destroy a nest if only one remains."
+LANGUAGE.there_are_too_many_nests					= "There are too many nests so you can't build any more!"
+LANGUAGE.you_have_made_too_many_nests				= "You've already created enough nests. Demolish one and try again."
+LANGUAGE.no_free_channel							= "Radio interference from too many already being placed!"
+LANGUAGE.tier_x_items_unlock_at_wave_y				= "Tier %d items unlock at wave %d"
+LANGUAGE.tier_x_items								= "Tier %d items"
+LANGUAGE.humans_furthest_from_sigils_are_zombies	= "The humans furthest from a Sanity Sigil will start as zombies."
+LANGUAGE.out_of_stock								= "That item is out of stock!"
+LANGUAGE.obtained_x_y_ammo							= "Obtained %d %s ammo"
+LANGUAGE.gave_x_y_ammo_to_z							= "Gave %d %s ammo to %s"
+LANGUAGE.obtained_x_y_ammo_from_z					= "Obtained %d %s ammo from %s"
+LANGUAGE.healed_x_by_y								= "%s healed you for %d HP"
+LANGUAGE.healed_x_for_y								= "Healed %s for %d HP"
+LANGUAGE.buffed_x_with_y							= "%s buffed you with a %s"
+LANGUAGE.buffed_x_with_a_y							= "Buffed %s with a %s"
+LANGUAGE.removed_your_nail							= "%s removed one of your nails"
+LANGUAGE.giving_items_to							= "Giving items to %s"
+LANGUAGE.weapon_remantler							= "Weapon Remantler"
+LANGUAGE.remantle_success							= "Weapon Remantled:"
+LANGUAGE.remantle_used								= "%d scrap has been created in your remantler."
+LANGUAGE.remantle_cannot							= "You already have an upgraded weapon of this type."
+LANGUAGE.teleporting_to_sigil						= "Teleporting to Sigil %s"
+LANGUAGE.press_shift_to_cancel						= "Press SHIFT to cancel"
+LANGUAGE.point_at_a_sigil_to_choose_destination		= "Point at another sigil to choose destination."
+LANGUAGE.frail_healdart_warning						= "Healing blocked because %s has DEBUFF: FRAIL!"
+LANGUAGE.obtained_a_inv								= "%s added to inventory"
+LANGUAGE.you_already_have_this_trinket				= "You already have this trinket in your inventory."
+LANGUAGE.they_already_have_this_trinket				= "They already have this trinket in their inventory."
+LANGUAGE.you_cannot_carry_more_comps				= "You cannot carry more crafting components."
+LANGUAGE.they_cannot_carry_more_comps				= "They cannot carry more crafting components."
+LANGUAGE.obtained_inv_item_from_z					= "Obtained %s from %s added to inventory"
+LANGUAGE.deployable_lost							= "Your %s was lost."
+LANGUAGE.deployable_claimed							= "You've claimed a %s."
+LANGUAGE.trinket_consumed							= "Your %s has been consumed and activated."
+LANGUAGE.ran_out_of_ammo						 	= "Your %s has run out of ammo."
+LANGUAGE.trinket_recharged							= "Your %s has recharged and is ready to use again."
+LANGUAGE.evolves_in_to_x_on_wave_y					= "Evolves in to %s on wave %d."
 
-LANGUAGE.classic_mode_warning						= "이 서버는 '클래식 모드'에서 작동 중이다.\n클래식 모드에선 게임 방식에 커다란 변화가 생깁니다. 바뀌는 점:\n* 좀비 종류를 변경할 수 없다. 모든 좀비는 클래식 좀비를 사용하게 된다.\n* 못, 터렛과 같은 바리케이딩 툴을 사용할 수 없다.\n* 웨이브가 더 많지만, 더 빨리 진행된다.\n\n그렇다고 해서 이 모드가 오리지널 좀비 서바이벌 모드는 아닙니다!\n\n-- 클래식 모드에서 운영 중인 서버는 왼쪽 아래에 클래식 모드 표시가 보이다 --"
-LANGUAGE.classic_mode								= "클래식 모드"
-LANGUAGE.resist_x									= "저항력: %d%%"
-LANGUAGE.right_click_to_hammer_nail					= "오른쪽 클릭으로 못 박기."
-LANGUAGE.nails_x									= "못: %d"
-LANGUAGE.resupply_box								= "보급 상자"
-LANGUAGE.purchase_now								= "지름신 강림!"
-LANGUAGE.integrity_x								= "내구도: %d%%"
-LANGUAGE.empty										= "비어 있음"
-LANGUAGE.manual_control								= "수동 조작"
-LANGUAGE.arsenal_crate								= "상점 상자"
+-- Sigils point objectives
+LANGUAGE.sigil										= "Sanity Sigil"
+--LANGUAGE.sigil_destroyed							= "A Sanity Sigil has been destroyed. The Undead grow stronger!"
+LANGUAGE.sigil_corrupted							= "A Sanity Sigil has been corrupted. The Undead grow more resilient."
+LANGUAGE.sigil_corrupted_last						= "The last Sanity Sigil has been corrupted! The Undead grow very resilient!"
+LANGUAGE.sigil_uncorrupted							= "A Sanity Sigil has been uncorrupted, the Undead have weakened!"
+--[[LANGUAGE.sigil_destroyed_only_one_remain_h		= "Only one Sanity Sigil remains!"
+LANGUAGE.sigil_destroyed_only_one_remain_z			= "Only one Sanity Sigil remains!"
+LANGUAGE.sigil_destroyed_x_remain					= "%d remaining."]]
+LANGUAGE.sigil_corrupted_x_remain					= "%d remain uncorrupted."
+--[[LANGUAGE.last_sigil_destroyed_all_is_lost		= "The Undead have destroyed the last Sanity Sigil..."
+LANGUAGE.last_sigil_destroyed_all_is_lost2			= "Time to die!"]]
+LANGUAGE.prop_obj_exit_h							= "Escape!"
+LANGUAGE.prop_obj_exit_z							= "Stop them!"
+LANGUAGE.x_sigils_appeared							= "%d Sanity Sigils have appeared. Humans may teleport between them."
+LANGUAGE.has_survived								= "has survived!"
 
--- Exit point objectives
-LANGUAGE.exit_destroyed								= "좀비들이 출구를 부쉈다!"
-LANGUAGE.exit_destroyed_only_one_remain_h			= "마지막 하나만이 남았다! 만약 이마저 부서진다면 더 이상의 희망은 없다!"
-LANGUAGE.exit_destroyed_only_one_remain_z			= "마지막 하나만이 남았다!"
-LANGUAGE.exit_destroyed_x_remain					= "%d개의 출구가 남아있음."
-LANGUAGE.last_exit_destroyed_all_is_lost			= "좀비들이 마지막 출구를 부숴버렸다."
-LANGUAGE.last_exit_destroyed_all_is_lost2			= "더 이상의 아무런 희망이 없다."
+-- Skill system messages
+LANGUAGE.unspent_skill_points_press_x				= "You have unspent skill points. Press %q to unlock new skills."
+LANGUAGE.x_requires_a_skill_you_dont_have			= "%s requires a skill you don't have!"
+LANGUAGE.you_ascended_to_level_x					= "You have ascended to level %d!"
+LANGUAGE.you_have_remorted_now_rl_x					= "You have remorted and ascended to remort level %d!"
+LANGUAGE.you_now_have_x_extra_sp					= "You now have %d extra skill points!"
+LANGUAGE.x_has_remorted_to_rl_y						= "%s has remorted to remort level %d!!"
+LANGUAGE.you_have_reset_all							= "All of your skills, XP, and skill points have been reset."
 
 -- Message beacon messages
-LANGUAGE.message_beacon_1							= "여기서 만나자"
-LANGUAGE.message_beacon_2							= "여기를 방어해야 한다"
-LANGUAGE.message_beacon_3							= "여기에 터렛을 설치해야 한다"
-LANGUAGE.message_beacon_4							= "여기에 상점이 필요하다"
-LANGUAGE.message_beacon_5							= "여기에 의무병이 필요하다"
-LANGUAGE.message_beacon_6							= "여기 탄약 박스가 있다"
-LANGUAGE.message_beacon_7							= "여기 상점이 있다"
-LANGUAGE.message_beacon_8							= "여기 포스필드가 필요하다"
-LANGUAGE.message_beacon_9							= "여기 폭발물이 필요하다"
-LANGUAGE.message_beacon_10							= "좀비들이 여길 통해 온다"
-LANGUAGE.message_beacon_11							= "들어가지 마!!"
-LANGUAGE.message_beacon_12							= "나가지 마라"
-LANGUAGE.message_beacon_13							= "이 지역을 방어하라"
-LANGUAGE.message_beacon_14							= "이 지점을 방어하라"
-LANGUAGE.message_beacon_15							= "의무병이 있다"
-LANGUAGE.message_beacon_16							= "내 상점에서 구매해 줘"
-LANGUAGE.message_beacon_17							= "바리케이드가 있다"
-LANGUAGE.message_beacon_18							= "이곳엔 바리케이드를 건설하지 마라"
-LANGUAGE.message_beacon_19							= "좀비를 한 발짝도 들이지 말라"
-LANGUAGE.message_beacon_20							= "이건 곧 부서진다"
-LANGUAGE.message_beacon_21							= "이 장소는 위험하다!"
-LANGUAGE.message_beacon_22							= "독을 조심해!"
-LANGUAGE.message_beacon_23							= "좀비들이 이곳을 통해 나타난다!"
-LANGUAGE.message_beacon_24							= "좀비들이 다가온다. 바리케이드를 건설해!"
-LANGUAGE.message_beacon_25							= "작전 B 지역"
+LANGUAGE.message_beacon_1							= "Meet up here"
+LANGUAGE.message_beacon_2							= "Need defense here"
+LANGUAGE.message_beacon_3							= "Need turrets here"
+LANGUAGE.message_beacon_4							= "Need arsenal crates here"
+LANGUAGE.message_beacon_5							= "Need medics here"
+LANGUAGE.message_beacon_6							= "Resupply box here"
+LANGUAGE.message_beacon_7							= "Arsenal crate here"
+LANGUAGE.message_beacon_8							= "Need force fields here"
+LANGUAGE.message_beacon_9							= "Need explosives here"
+LANGUAGE.message_beacon_10							= "Zombies come from here"
+LANGUAGE.message_beacon_11							= "Do not enter!!"
+LANGUAGE.message_beacon_12							= "Don't go out"
+LANGUAGE.message_beacon_13							= "Defend this area"
+LANGUAGE.message_beacon_14							= "Defend this spot"
+LANGUAGE.message_beacon_15							= "Medics here"
+LANGUAGE.message_beacon_16							= "Buy from my crate"
+LANGUAGE.message_beacon_17							= "Barricade here"
+LANGUAGE.message_beacon_18							= "Don't barricade here"
+LANGUAGE.message_beacon_19							= "Don't let zombies in here"
+LANGUAGE.message_beacon_20							= "This will break"
+LANGUAGE.message_beacon_21							= "This place is dangerous!"
+LANGUAGE.message_beacon_22							= "Beware of poison!"
+LANGUAGE.message_beacon_23							= "Zombies are breaking through here!"
+LANGUAGE.message_beacon_24							= "Zombies are coming. Build a barricade!"
+LANGUAGE.message_beacon_25							= "Plan B here"
 
 -- Class names
-LANGUAGE.class_zombie								= "좀비"
-LANGUAGE.class_poison_zombie						= "포이즌 좀비"
-LANGUAGE.class_fast_zombie							= "패스트 좀비"
-LANGUAGE.class_bloated_zombie						= "부푼 좀비"
-LANGUAGE.class_classic_zombie						= "클래식 좀비"
-LANGUAGE.class_super_zombie							= "슈퍼 좀비"
-LANGUAGE.class_fresh_dead							= "신선한 시체"
-LANGUAGE.class_ghoul								= "구울"
-LANGUAGE.class_headcrab								= "헤드크랩"
-LANGUAGE.class_fast_headcrab						= "패스트 헤드크랩"
-LANGUAGE.class_poison_headcrab						= "포이즌 헤드크랩"
-LANGUAGE.class_the_tickle_monster					= "티클 몬스터"
-LANGUAGE.class_nightmare							= "나이트메어"
-LANGUAGE.class_pukepus								= "푸크퍼스"
-LANGUAGE.class_bonemesh								= "본매쉬"
-LANGUAGE.class_crow									= "까마귀"
+LANGUAGE.class_zombie								= "Zombie"
+LANGUAGE.class_zombie_gore_blaster					= "Gore Blaster Zombie"
+LANGUAGE.class_poison_zombie						= "Poison Zombie"
+LANGUAGE.class_wild_poison_zombie					= "Wild Poison Zombie"
+LANGUAGE.class_fast_zombie							= "Fast Zombie"
+LANGUAGE.class_fast_zombie_slingshot				= "Slingshot Zombie"
+LANGUAGE.class_bloated_zombie						= "Bloated Zombie"
+LANGUAGE.class_vile_bloated_zombie					= "Vile Bloated Zombie"
+LANGUAGE.class_classic_zombie						= "Classic Zombie"
+LANGUAGE.class_super_zombie							= "Super Zombie"
+LANGUAGE.class_fresh_dead							= "Fresh Dead"
+LANGUAGE.class_recent_dead							= "Recent Dead"
+LANGUAGE.class_agile_dead							= "Agile Dead"
+LANGUAGE.class_ghoul								= "Ghoul"
+LANGUAGE.class_chilled_ghoul						= "Frigid Ghoul"
+LANGUAGE.class_elderghoul							= "Elder Ghoul"
+LANGUAGE.class_noxiousghoul							= "Noxious Ghoul"
+LANGUAGE.class_headcrab								= "Headcrab"
+LANGUAGE.class_fast_headcrab						= "Fast Headcrab"
+LANGUAGE.class_bloodsucker_headcrab					= "Bloodsucker Headcrab"
+LANGUAGE.class_poison_headcrab						= "Poison Headcrab"
+LANGUAGE.class_barbed_headcrab						= "Barbed Headcrab"
+LANGUAGE.class_the_tickle_monster					= "The Tickle Monster"
+LANGUAGE.class_nightmare							= "Nightmare"
+LANGUAGE.class_ancient_nightmare					= "Ancient Nightmare"
+LANGUAGE.class_devourer								= "Devourer"
+LANGUAGE.class_pukepus								= "Pukepus"
+LANGUAGE.class_bonemesh								= "Bonemesh"
+LANGUAGE.class_crow									= "Crow"
 LANGUAGE.class_wilowisp								= "Wil O' Wisp"
-LANGUAGE.class_zombie_torso							= "좀비 몸통"
-LANGUAGE.class_zombie_legs							= "좀비 다리"
-LANGUAGE.class_wraith								= "망령"
-LANGUAGE.class_flesh_beast							= "감염된 맹수"
-LANGUAGE.class_fast_zombie_legs						= "패스트 좀비 다리"
-LANGUAGE.class_chem_zombie							= "챔 좀비"
-LANGUAGE.class_shade								= "셰이드"
+LANGUAGE.class_coolwisp								= "Cool Wisp"
+LANGUAGE.class_zombie_torso							= "Zombie Torso"
+LANGUAGE.class_zombie_legs							= "Zombie Legs"
+LANGUAGE.class_wraith								= "Wraith"
+LANGUAGE.class_tormented_wraith						= "Tormented Wraith"
+LANGUAGE.class_fast_zombie_legs						= "Fast Zombie Legs"
+LANGUAGE.class_fast_zombie_torso					= "Fast Zombie Torso"
+LANGUAGE.class_fast_zombie_torso_slingshot			= "Slingshot Zombie Torso"
+LANGUAGE.class_chem_burster							= "Chem Burster"
+LANGUAGE.class_shade								= "Shade"
+LANGUAGE.class_frostshade							= "Frost Shade"
+LANGUAGE.class_butcher								= "The Butcher"
+LANGUAGE.class_gravedigger							= "The Grave Digger"
+LANGUAGE.class_flesh_creeper						= "Flesh Creeper"
+LANGUAGE.class_gore_child							= "Gore Child"
+LANGUAGE.class_giga_gore_child						= "Giga Gore Child"
+LANGUAGE.class_shadow_gore_child					= "Shadow Child"
+LANGUAGE.class_giga_shadow_child					= "Giga Shadow Child"
+LANGUAGE.class_asskicker							= "Ass Kicker"
+LANGUAGE.class_shitslapper							= "Shit Slapper"
+LANGUAGE.class_doomcrab								= "Doom Crab"
+LANGUAGE.class_red_marrow							= "Red Marrow"
+LANGUAGE.class_skeletal_walker						= "Skeletal Walker"
+LANGUAGE.class_skeletal_shambler					= "Skeletal Shambler"
+LANGUAGE.class_skeletal_lurker						= "Skeletal Crawler"
+LANGUAGE.class_shadow_lurker						= "Shadow Lurker"
+LANGUAGE.class_shadow_walker						= "Shadow Walker"
+LANGUAGE.class_frigid_revenant						= "Frigid Revenant"
+LANGUAGE.class_initial_dead							= "Initial Dead"
+LANGUAGE.class_lacerator							= "Lacerator"
+LANGUAGE.class_lacerator_charging					= "Charger"
+LANGUAGE.class_eradicator							= "Eradicator"
+LANGUAGE.class_howler								= "Howler"
+LANGUAGE.class_extinctioncrab						= "Extinction Crab"
 
 -- Class descriptions
-LANGUAGE.description_zombie							= "체력도 좋고 힘도 쓸만한 좀비.\n머리를 맞지 않는다면 죽이기가 어렵다."
-LANGUAGE.description_poison_zombie					= "이 돌연변이 좀비는 강력할 뿐 아니라 특수한 능력도 갖고 있다.\n이 좀비의 몸은 굉장한 독성으로 이뤄져 있으며 살점을 뜯어 멀리 던질 수 있다."
-LANGUAGE.description_fast_zombie					= "이 뼈밖에 안 남은 좀비는 다른 좀비들보다 훨씬 빠르다.\n날카로운 손톱과 발톱을 사용해 벽을 기어오를 수 있다.\n또한, 약해진 인간을 잡기에 전혀 무리가 없을 정도로 충분히 위협적이다."
-LANGUAGE.description_bloated_zombie					= "이 좀비의 몸체는 유독한 휘발성 물질로 구성돼 있다.\n느리게 이동하지만 충분히 위험하다."
-LANGUAGE.description_ghoul							= "이 좀비는 강산성 피부를 갖고 있다.\n다른 좀비들보단 약간 약하지만, 독을 던질 수 있는 능력이 있다.\n이 좀비의 공격을 인간이 맞는다면 그 인간은 느려지게 되고, 독은 느려지고 약해진 인간을 잡기에 충분하다."
-LANGUAGE.description_headcrab						= "헤드크랩은 대규모 감염사태 초기에 발견된 좀비이다.\n현재까지 그 누구도 이 좀비가 어디서 왔는지 모른다.\n이들은 배에 있는 날카로운 이빨을 사용해 물어뜯는다."
-LANGUAGE.description_fast_headcrab					= "수컷 헤드크랩은 암컷보다 빠르지만, 그보다는 약하다.\n그러나 만약 이 좀비가 인간들 집단 사이에 난입한다면, 상당히 위협적인 존재가 된다."
-LANGUAGE.description_poison_headcrab				= "이 헤드크랩은 블랙맘바의 독을 갖고 있다.\n한 번 물면 성인 한 명은 가볍게 죽이는 독성을 지녔다.\n독을 뱉을 수 있는 능력이 있다.\n만약 독이 얼굴에 맞았다면, 일시적으로 실명을 하게 된다."
-LANGUAGE.description_the_tickle_monster				= "당신이 잠든 밤, 장롱 속에 숨어있다가 침대로부터 당신을 끌어내어 죽인다는 괴물.\n티클 몬스터의 자유자재로 늘어나는 팔은 인간들이 도망갈 수 없게 하고,\n인간들의 사각지대에서 바리케이드를 부수는데 아주 유용하다."
-LANGUAGE.description_nightmare						= "알 수 없는 돌연변이를 거친 나이트메어는 굉장히 비상식적인 능력을 지니게 됐다.\n거의 모든 경우에서, 존재하는 어떠한 좀비보다 강력한 힘을 지녔다.\n단 한 번의 할큄만으로도 인간을 넉다운 시키기에 충분하다."
-LANGUAGE.description_pukepus						= "이 좀비의 장기는 독을 생성하는 데에 특화됐다.\n푸크퍼스의 독을 토해내는 공격 방식은, 근접한 인간에게 있어 공포의 대상이다."
-LANGUAGE.description_bonemesh						= "이 좀비는 고깃덩어리를 뭉쳐 던진다.\n각각의 고깃덩이는 공격하는 데에도 쓰이지만, 아군 좀비가 기력을 되찼는데 쓰이기도 한다."
-LANGUAGE.description_crow							= "[데이터 말소]"
-LANGUAGE.description_wilowisp						= "Sometimes referred to as spirits of the dead."
+LANGUAGE.description_zombie							= "The basic zombie is very durable and has powerful claws.\nIt's hard to keep down, especially if not shot in the head."
+LANGUAGE.description_zombie_gore_blaster			= "Gore Blaster Zombies send viscera in all direction when killed which can cause minor harm.\nTheir claws can also inflict bleeding."
+LANGUAGE.description_poison_zombie					= "This mutated zombie is not only extremely durable but has abnormal strength.\nIts body is extremely toxic and will even tear out and toss its own flesh at things too far away to hit."
+LANGUAGE.description_wild_poison_zombie				= "An erratic mutation of the poison zombie, making it stronger and tankier.\nIts flesh toss is much more sporadic and deadly."
+LANGUAGE.description_fast_zombie					= "This boney cadaver is much faster than other zombies.\nThey aren't much of a threat by themselves but can reach nearly any area by climbing with their razor sharp claws\nThey also have no problem hunting down weak or hurt humans."
+LANGUAGE.description_fast_zombie_slingshot			= "An abnormal Fast Zombie with a powerful lunge.\nThe force applied is so great that it destroys their lower body, sending what's left at incredible speed.\nThe impact it causes will leave humans crippled for a while."
+LANGUAGE.description_bloated_zombie					= "Their body is comprised of volatile, toxic chemicals.\nAlthough they move slower, they can take slightly more of a beating."
+LANGUAGE.description_vile_bloated_zombie			= "Their body is comprised of volatile, toxic chemicals which they can vomit a fair distance away.\nThey're a little faster than regular bloated zombies at the cost of being not as hardy."
+LANGUAGE.description_fresh_dead						= "These are zombies who have come back from the dead recently.\nThey have less durability and power than those who have rotted but make up for it in speed."
+LANGUAGE.description_agile_dead						= "These are zombies who have come back from the dead recently.\nThis mutation allows the fresh dead to climb at the cost of being extremely flimsy."
+LANGUAGE.description_ghoul							= "This zombie has highly toxic flesh.\nIt's slightly weaker than other zombies but makes up for it with its debilitating attacks.\nIts claws can debuff a human for a short time, causing increased damage from other attacks and it can throw goop which slows them."
+LANGUAGE.description_chilled_ghoul					= "This zombie has extremely cold flesh.\nIt's slightly weaker than other zombies but makes up for it with its debilitating attacks."
+LANGUAGE.description_frigid_revenant				= "A dark skeleton with a cold heart.\nDerived from the Frigid Ghoul, and has the Shadow Walker's resistance to melee attacks.\nCan chill and blind with its attacks."
+LANGUAGE.description_elderghoul						= "An aged Ghoul with a highly poisonous body which they throw pieces of at distant victims.\nTheir frail body will discharge poison towards attackers when harmed."
+LANGUAGE.description_noxiousghoul					= "A deeply aged ghoul with highly virulent goop merged with their body.\nTheir projectiles will slow and enfeeble unlucky victims, and their body will discharge poison towards attackers when harmed."
+LANGUAGE.description_headcrab						= "Headcrabs are what caused the initial infection.\nNo one knows where they truely came from.\nTheir method of attack is lunging with the sharp beaks on their belly."
+LANGUAGE.description_fast_headcrab					= "The male headcrab is considerably faster but less beefy than the female.\nEither way, it's equally as annoying and deadly in groups."
+LANGUAGE.description_bloodsucker_headcrab			= "Bloodsuckers are stockier fast headcrabs with bleed inflicting bites.\nEach successful bite will heal a small amount of health."
+LANGUAGE.description_poison_headcrab				= "This Headcrab is full of deadly neurotoxins.\nOne bite is usually enough to kill an adult human.\nIt also has the ability to spit a less potent version of its poisons.\nThe spit is just as deadly if its victim is hit in the face."
+LANGUAGE.description_barbed_headcrab				= "This Headcrab bristles with sharp quills.\nIt can project a bristle at high speed inflicting bleeding upon unlucky humans."
+LANGUAGE.description_the_tickle_monster				= "Said to be the monster that hides in your closet at night to drag you from your bed.\nThe Tickle Monster's almost elastic arms make it extremely hard to outrun and they also make it an ideal barricade destroyer."
+LANGUAGE.description_nightmare						= "An extremely rare mutation gives the Nightmare its abnormal abilities.\nStronger than the every day zombie in almost every way, the Nightmare is a force to be reckoned with.\nOne swipe of its claws is enough to put down almost any person."
+LANGUAGE.description_ancient_nightmare				= "An elderly Nightmare that has been roaming the land for ages.\nIts body has been tempered by the years, making it sturdier and less mobile but still formidable up close."
+LANGUAGE.description_devourer						= "A horrific malformation of bone and flesh, with a throwable rib that pierces into victims to reel them in.\nNot very fast on its own but incredibly dangerous to deal with alone."
+LANGUAGE.description_pukepus						= "The rotting body of the Puke Pus is comprised entirely of organs used for the generation of poison.\nIt's capable of vomiting gallons of poison puke at a time making it extremely dangerous."
+LANGUAGE.description_bonemesh						= "Disfigured and mangled, the Bonemesh is capable of tossing blood bombs.\nEach bomb is comprised of bones and flesh that damages humans while giving precious food to other zombies."
+LANGUAGE.description_crow							= "Carrion Crows are more of a pest than they were before the infection.\nThey feed on infected flesh and become 'carriers' for the undead.\nWhy would you ever make this class not hidden?\nWhat is wrong with you?"
+LANGUAGE.description_wilowisp						= "Sometimes referred to as spirits of the dead.\nDoes minimal damage but is capable of blinding humans and explodes when killed.\nInduces almost no fear."
+LANGUAGE.description_coolwisp						= "An arctic Wisp with the ability to impede humans with frost.\nFrost reduces the fire rate and reload speed of firearms."
 LANGUAGE.description_zombie_torso					= "You shouldn't even be seeing this."
 LANGUAGE.description_zombie_legs					= "You shouldn't even be seeing this."
-
-LANGUAGE.description_wraith							= "좀비, 혹은 유령?\n이 개체에 대해서는 알려진 것이 많지 않지만\n망령만의 특별한 스텔스 기능과 날카로운 손톱은 세상의 어떤 유령보다 강력하다."
-LANGUAGE.description_flesh_beast					= "*pending*"
+LANGUAGE.description_wraith							= "A zombie or an apparition?\nNot much is known about it besides the fact that it uses its\nunique stealth ability and sharp claws to cut things to ribbons."
+LANGUAGE.description_tormented_wraith				= "A more twisted kin of the Wraith.\nThis variant is capable of becoming crazed after taking damage, speeding up their attacks and movement.\nThey attack much faster at the cost of less damage per hit overall.\n"
+LANGUAGE.description_fast_zombie_torso				= "You shouldn't even be seeing this."
+LANGUAGE.description_fast_zombie_torso_slingshot	= "You shouldn't even be seeing this."
 LANGUAGE.description_fast_zombie_legs				= "You shouldn't even be seeing this."
-
-
-LANGUAGE.description_chem_zombie					= "챔 좀비의 몸은 각종 독성 화학물질로 구성되어 있다.\n챔 좀비는 공격할 수 없지만,\n죽을 때에 강력한 폭발을 일으켜 주변의 모든 인간 및 바리케이드에 데미지를 가한다."
-LANGUAGE.description_shade							= "자신의 주변에 강력한 자기장을 형성하므로써, 모든 공격을 무효화시킨다.\n그러나 어떤 이유에선지 강한 빛에 약한 모습을 보인다."
+LANGUAGE.description_chem_burster					= "The Chem Burster body is comprised of volatile, toxic chemicals.\nIt has no other means of attack besides being killed in hopes of blowing up next to any nearby humans."
+LANGUAGE.description_shade							= "By creating a strong magnetic field around itself with a channeled shield, all bullets and projectiles are rendered useless against it until the shield is destroyed.\nThey can hurl any unnailed object at high velocity towards humans for devastating effect."
+LANGUAGE.description_frostshade						= "Frost Shades create weaker shields and projectiles than their normal counterpart, but can afflict humans with frost once shattered.\nThe cold will slow down their actions and jam their weapons, making them fire slower."
+LANGUAGE.description_butcher						= "A crazed, undead butcher. It isn't very tough but anyone unlucky enough to be near it will most likely be torn to shreds."
+LANGUAGE.description_gravedigger					= "A deranged, undead grave keeper. It wields a shovel made from bones found in a cemetery."
+LANGUAGE.description_flesh_creeper					= "Flesh Creepers possess the ability to create nests.\nFrom these nests, other zombified creatures emerge.\nThe way this works is unknown but it is imperative to destroy any nests or creepers."
+LANGUAGE.description_gore_child						= "Once zombified, an unborn child becomes infected as well.\nPossessing no special abilities, their strength comes from their numbers."
+LANGUAGE.description_giga_gore_child				= "The result of a Gore Child which has been left unchecked for too long.\nA horror to behold, their massive body is the result of zombified stem cells.\nThey also become a host for Gore Children which can always be found in tow with it."
+LANGUAGE.description_giga_shadow_child				= "A corrupted Gore Child with the ability to obscure a human's vision.\nLess sturdy than the Giga Gore Child but with a high resistance to melee weapons.\nThe spawns it creates are equally resistant and capable of vision obscuration."
+LANGUAGE.description_shadow_gore_child				= "A Gore Child that has been corrupted by the darkness."
+LANGUAGE.description_asskicker						= "It's time to kick humans and chew ass, and I'm all out of ass."
+LANGUAGE.description_shitslapper					= "How about I slap your shit?"
+LANGUAGE.description_doomcrab						= "A massive headcrab that leaps on its victims to crush them.\nAlso has the ability to throw doom balls which debilitate humans."
+LANGUAGE.description_red_marrow						= "Mutated polycythemia gives the Red Marrow its color and ability to prfusely expel blood.\nAfter taking some damage a blood shield is created, rendering the Red Marrow impervious to attacks."
+LANGUAGE.description_skeletal_walker				= "Animated skeletons don't have a lot of health but they take minimal damage from bullets."
+LANGUAGE.description_skeletal_shambler				= "A behemoth of a skeleton that is moderately durable but also take minimal damage from bullets.\nThey also have the capacity to make a second wind."
+LANGUAGE.description_skeletal_lurker				= "A Skeletal Walker that lost the use of its legs.\nAnimated skeletons don't have a lot of health but they take minimal damage from bullets."
+LANGUAGE.description_shadow_lurker					= "Extremely hard to see in the dark and resistant against melee attacks. Their hits inflict a vision dimming debuff."
+LANGUAGE.description_shadow_walker					= "An evolved form of the Shadow Lurker with less mobility.\nExtremely hard to see in the dark and resistant against melee attacks. Their hits inflict a vision dimming debuff."
+LANGUAGE.description_lacerator						= "Lacerators are identical to Fast Zombies in almost every way.\nDespite their similarities, they are even deadlier and do not share their counterpart's fragility"
+LANGUAGE.description_lacerator_charging				= "These brutes can run deceptively fast while charging despite their burly demeanor.\nThe force behind their charge can knock anyone off their feet."
+LANGUAGE.description_eradicator						= "Bringers of death and destruction. The Eradicators sport a durable body that require a lot of fire power to take down.\nUnless shot in the head, they are almost garanteed to rise again."
+LANGUAGE.description_howler							= "A terrifying flesh titan with a piercing shriek.\nIts howl inspires the undead and instills fear in the living."
+LANGUAGE.description_extinctioncrab					= "Vile diseases churn within this giant headcrab.\nThe spores it spits will afflict those near it, reducing the effectiveness of healing."
 
 -- Class control schemes
-
-LANGUAGE.controls_zombie							= "> 공격 1: 할큄\n> 공격 2: 울부짖음\n> 재장전: 신음\n> 달리기: 죽은척 함\n> 다리에 치명적 공격을 받았을 시: 부활 / 변형"
-LANGUAGE.controls_poison_zombie						= "> 공격 1: 할큄\n> 공격 2: 살점 던지기\n> 재장전: 울부짖음"
-LANGUAGE.controls_fast_zombie						= "> 공격 1: 할큄\n> 공격 2: 달려듦 / 벽 타기 (벽 앞에서)\n> 재장전: 울부짖음"
-LANGUAGE.controls_bloated_zombie					= "> 공격 1: 할큄\n> 공격 2: 신음\n> 달리기: 죽은척 함\n> 죽을 때: 독 쐐기"
-
-LANGUAGE.controls_ghoul								= "> 공격 1: 독 할큄\n> 공격 2: 살점 던지기\n> 달리기: 죽은척 함\n> 재장전: 울부짖음\n> 인간을 맞췄을 시: 대상 느려짐\n> 인간에게 공격받을 시: 독 주입"
-LANGUAGE.controls_headcrab							= "> 공격 1: 달려듦 \n> 재장전: 버로우"
-LANGUAGE.controls_fast_headcrab						= "> 공격 1: 달려듦 "
-
-LANGUAGE.controls_poison_headcrab					= "> 공격 1: 달려듦 \n> 공격 2: 독 발사\n> 인간을 맞췄을 시: 상태이상 '독'\n> 눈에 적중 시: 일시 실명\n> 재장전: 울부짖음"
-LANGUAGE.controls_the_tickle_monster				= "> 공격 1: 늘어나며 할큄\n> 공격 2: 신음"
-LANGUAGE.controls_nightmare							= "> 공격 1: 할큄\n> 공격 2: 신음"
-LANGUAGE.controls_pukepus							= "> 공격 1: 토함"
-LANGUAGE.controls_bonemesh							= "> 공격 1: 할큄\n> 공격 2: 피 폭탄 던짐"
-
-LANGUAGE.controls_wraith							= "> 공격 1: 할큄\n> 공격 2: 울부짖음\n> 패시브: 이동과 거리에 따른 투명도 변화"
-LANGUAGE.controls_flesh_beast						= "> 공격 1: 할큄\n> 공격 2: 박치기"
-LANGUAGE.controls_chem_zombie						= "> 죽을 때: 독 폭탄"
-LANGUAGE.controls_shade								= "> 공격 1: 들기\n> 공격 2: 던지기"
+LANGUAGE.controls_zombie							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON FATAL HIT IN LEGS: Revive / Transform"
+LANGUAGE.controls_zombie_gore_blaster				= "> PRIMARY: Claws\n> ON HIT HUMAN: Bleed\n> SECONDARY: Scream\n> SPRINT: Feign death\n> ON DEATH: Gore Blast"
+LANGUAGE.controls_poison_zombie						= "> PRIMARY: Claws\n> SECONDARY: Flesh toss\n> RELOAD: Scream"
+LANGUAGE.controls_wild_poison_zombie				= "> PRIMARY: Claws\n> SECONDARY: Flesh toss\n> RELOAD: Scream"
+LANGUAGE.controls_fast_zombie						= "> PRIMARY: Claws\n> SECONDARY: Lunge / Climb wall\n> RELOAD: Scream\n> ON FATAL HIT IN LEGS: Transform"
+LANGUAGE.controls_fast_zombie_slingshot				= "> PRIMARY: Claws\n> SECONDARY: Slingshot / Climb wall\n> RELOAD: Scream\n> ON SLINGSHOT HUMAN: Slow"
+LANGUAGE.controls_bloated_zombie					= "> PRIMARY: Claws\n> SECONDARY: Moan\n> SPRINT: Feign death\n> ON DEATH: Poison Gibs"
+LANGUAGE.controls_vile_bloated_zombie				= "> PRIMARY: Claws\n> SECONDARY: Poison Vomit\n> SPRINT: Feign death"
+LANGUAGE.controls_fresh_dead						= "> PRIMARY: Claws\n> SECONDARY: Scream\n> SPRINT: Feign death"
+LANGUAGE.controls_agile_dead						= "> PRIMARY: Claws\n> SECONDARY: Climb wall"
+LANGUAGE.controls_ghoul								= "> PRIMARY: Poison claws\n> SECONDARY: Throw slowing goop\n> SPRINT: Feign death\n> RELOAD: Scream\n> ON HIT HUMAN: Ghoul Touch"
+LANGUAGE.controls_chilled_ghoul						= "> PRIMARY: Frost claws\n> SECONDARY: Throw frozen goop\n> SPRINT: Feign death\n> RELOAD: Scream\n> ON HIT HUMAN: Frost"
+LANGUAGE.controls_frigid_revenant					= "> PRIMARY: Frost and blind claws\n> SECONDARY: Throw dark ice goop\n> ON HIT HUMAN: Frost and dim vision"
+LANGUAGE.controls_elderghoul						= "> PRIMARY: Poison claws\n> SECONDARY: Flesh toss\n> RELOAD: Scream\n> ON DAMAGE TAKEN: Poison spray"
+LANGUAGE.controls_noxiousghoul						= "> PRIMARY: Poison claws\n> SECONDARY: Throw disabling goop\n> RELOAD: Scream\n> ON DAMAGE TAKEN: Poison spray\n> ON HIT HUMAN: Ghoul Touch"
+LANGUAGE.controls_headcrab							= "> PRIMARY: Lunge attack\n> RELOAD: Burrow"
+LANGUAGE.controls_fast_headcrab						= "> PRIMARY: Lunge attack"
+LANGUAGE.controls_bloodsucker_headcrab				= "> PRIMARY: Lunge attack\n> ON HIT HUMAN: Bleed and heal for a small amount of health"
+LANGUAGE.controls_poison_headcrab					= "> PRIMARY: Lunge attack\n> SECONDARY: Spit poison\n> ON HIT HUMAN: Deadly poison\n> ON HIT POISON IN EYES: Blind\n> RELOAD: Scream"
+LANGUAGE.controls_barbed_headcrab					= "> PRIMARY: Lunge attack\n> SECONDARY: Spit bristle\n> ON HIT HUMAN: Strong bleed\n> RELOAD: Scream"
+LANGUAGE.controls_the_tickle_monster				= "> PRIMARY: Elastic claws\n> SECONDARY: Moan"
+LANGUAGE.controls_nightmare							= "> PRIMARY: Death touch\n> SECONDARY: Moan"
+LANGUAGE.controls_ancient_nightmare					= "> PRIMARY: Death claw\n> SECONDARY: Moan"
+LANGUAGE.controls_devourer							= "> PRIMARY: Claw\n> SECONDARY: Reel target in with projectile"
+LANGUAGE.controls_pukepus							= "> PRIMARY: Puke\n> ON DAMAGE TAKEN: Poison spray\n> ON DEATH: Poison explosion"
+LANGUAGE.controls_bonemesh							= "> PRIMARY: Claws\n> SECONDARY: Toss blood bomb"
+LANGUAGE.controls_wraith							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> INVISIBILITY BASED ON MOVEMENT AND VIEW DISTANCE"
+LANGUAGE.controls_tormented_wraith					= "> PRIMARY: Claws\n> SECONDARY: Scream\n> INVISIBILITY BASED ON MOVEMENT AND VIEW DISTANCE\n> MADDENED WHEN TAKING DAMAGE BELOW 70 HP"
+LANGUAGE.controls_chem_burster						= "> PRIMARY: Death Charge\n> ON DEATH: Poison Bomb (power based on charge time)"
+LANGUAGE.controls_shade								= "> PRIMARY: Throw\n> SECONDARY: Lift\n> RELOAD: Pull rock from ground\n> SPRINT: Channel shield"
+LANGUAGE.controls_frostshade						= "> PRIMARY: Throw\n> SECONDARY: Lift\n> RELOAD: Create ice missile\n> SPRINT: Channel frost shield"
+LANGUAGE.controls_butcher							= "> PRIMARY: Chop"
+LANGUAGE.controls_gravedigger						= "> PRIMARY: Smack"
+LANGUAGE.controls_flesh_creeper						= "> PRIMARY: Head Smash\n> SECONDARY: Nest\n> RELOAD: Leap"
+LANGUAGE.controls_gore_child						= "> PRIMARY: Claws"
+LANGUAGE.controls_giga_gore_child					= "> PRIMARY: Smash\n> SECONDARY: Throw Gore Child\n> RELOAD: Knockdown Cry"
+LANGUAGE.controls_giga_shadow_child					= "> PRIMARY: Smash\n> SECONDARY: Throw Shadow Child\n> RELOAD: Obscuring Knockdown Cry\n> ON HIT: Dim Vision\n> ON HIT BY MELEE: Resist damage"
+LANGUAGE.controls_shadow_gore_child					= "> PRIMARY: Claws\n> ON HIT: Dim Vision\n> ON HIT BY MELEE: Resist damage"
+LANGUAGE.controls_asskicker							= "> PRIMARY: Left kick\n> SECONDARY: Right kick"
+LANGUAGE.controls_shitslapper						= "> PRIMARY: Slap"
+LANGUAGE.controls_doomcrab							= "> PRIMARY: Leap attack\n> SECONDARY: Doom ball"
+LANGUAGE.controls_red_marrow						= "> PRIMARY: Claws\n> SECONDARY: Scream\n> ON EVERY 200 DAMAGE TAKEN: Create blood shield"
+LANGUAGE.controls_skeletal_walker					= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON HIT BY BULLET: Resist damage"
+LANGUAGE.controls_skeletal_shambler					= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON HIT BY BULLET: Resist damage\n> ON FATAL HIT IN LEGS: Revive"
+LANGUAGE.controls_skeletal_lurker					= "> PRIMARY: Claws\n> SECONDARY: Moan\n> ON HIT BY BULLET: Resist damage"
+LANGUAGE.controls_wilowisp							= "> PRIMARY: Blinding Light\n> RELOAD: Moan\n> ON DEATH: Blinding Explosion"
+LANGUAGE.controls_coolwisp							= "> PRIMARY: Freezing Pulse\n> RELOAD: Moan\n> ON DEATH: Arctic Explosion"
+LANGUAGE.controls_shadow_lurker						= "> PRIMARY: Claws\n> ON HIT: Dim Vision\n> ON HIT BY MELEE: Resist damage"
+LANGUAGE.controls_lacerator							= "> PRIMARY: Claws\n> SECONDARY: Lunge / Climb wall\n> RELOAD: Scream"
+LANGUAGE.controls_lacerator_charging				= "> PRIMARY: Bleeding Claws\n> ON HIT HUMAN: Bleed\n> SECONDARY: Charge\n> RELOAD: Scream"
+LANGUAGE.controls_eradicator						= "> PRIMARY: Claws\n> SECONDARY: Scream\n> ON FATAL HIT: Revive"
+LANGUAGE.controls_howler							= "> PRIMARY: Claws\n> SECONDARY: Howl\n> RELOAD: Moan"
+LANGUAGE.controls_extinctioncrab					= "> PRIMARY: Leap Attack\n> SECONDARY: Extinction Spore"
 
 -- The help file... Quite big! I wouldn't blame you if you didn't translate this part.
-LANGUAGE.help_cat_introduction						= "좀비 서바이벌"
-LANGUAGE.help_cat_survival							= "서바이벌"
-LANGUAGE.help_cat_barricading						= "바리케이딩"
-LANGUAGE.help_cat_upgrades							= "업그레이드"
-LANGUAGE.help_cat_being_a_zombie					= "좀비"
+LANGUAGE.help_cat_introduction						= "Introduction"
+LANGUAGE.help_cat_survival							= "Survival"
+LANGUAGE.help_cat_barricading						= "Barricading"
+LANGUAGE.help_cat_upgrades							= "Upgrades"
+LANGUAGE.help_cat_being_a_zombie					= "Being a Zombie"
+LANGUAGE.help_cont_introduction						= [[<p>    Welcome to Zombie Survival, the (zombie) survival simulator. ZS allows you to fight zombie attacks, create barricades, and even be part of the undead horde.</p>
 
-LANGUAGE.help_cont_introduction						= [[<p>    좀비 대재앙을 경험할 수 있게 해주는 좀비 서바이벌에 오신 것을 환영한다! 여러분은 이제 바리케이드를 짓고, 좀비를 박살 내며, 언데드들과 전쟁을 벌일 수 있다.</p>
-<p>좀비 서바이벌에는 생존자와 좀비라는 두 팀이 있다. 생존자, 즉 인간은 모든 웨이브를 버티면 승리하게 된다. 어떤 맵들은 승리하기 위해 특별한 미션을 수행해야 하는 경우도 있다.
-만약 인간이 죽는다면, 좀비로 되살아나 생존자의 생존이 훨씬 힘들어지게 된다. 협력을 잘해야 유리하다는 말이죠.</p>
-<p>좀비들의 목표는 모든 생존자을 사냥하여 패배하게 하는 것이다. 이때, 좀비 진영에서도 '패배'라는 메세지를 보게 된다. 즉, 승리하려면 반드시 인간인 상태로 생존해야 한다는 얘기죠.
-그 대신, 한 좀비는 4명의 인간을 죽여 성불(환생)할 수 있다. 생존하여 승리할 수 있는 두 번째 기회를 잡게 되는 겁니다.
-하지만 기억하세요. 앞서 말씀드렸듯, '승리'할 수 있는 단 하나의 방법은 인간인 상태로 끝까지 생존하는 것뿐이다. 좀비는 승리할 수 없다. 다만 모두를 패배하게 할 수 있을 뿐이죠!</p>
-<p>일정 수의 사람은 선택되거나 지원하여 숙주 좀비가 된다. 몇 명이 선택될지는 라운드 시작 전 화면 하단에 표시된다.</p>
-<p><b>상단의 메뉴를 클릭하시면 다른 유용한 정보를 알아보실 수 있다.</b></p>
-<p>팁:
-<ul><li>인간이 재접속하면 좀비가 된다.</li>
-<li>어느 정도 시간이 흐른 후에는 새로운 플레이어도 좀비가 된다.</li>
-<li>팀 채팅이 필요하시면 사용하세요. 기본 키는 U이다.</li>
+<p>There are two teams: the survivors and the zombies. The humans win if they survive every wave. Some levels have special objectives to be completed, which may be optional or required to win.
+If a human is killed then they'll come back as a zombie, which makes it even more difficult for the remaining humans.</p>
+
+<p>The goal for the zombies is to kill all of the humans, making them all zombies and causing everyone to lose the round.
+Alternatively, a zombie can kill four humans to be redeemed. This allows them a second chance at survival and victory.
+Remember, the only way to win a round is to be a human when the round ends. Zombies can't technically win the game; zombies can only make everyone else lose!</p>
+
+<p>A certain amount of people are chosen (or volunteer) for being the starting zombies. This amount is displayed at the bottom of your screen before the round starts.</p>
+
+<p><b>Use the buttons up top to get help on more specific things.</b></p>
+
+<p>Tips for this section:
+<ul><li>If you leave the game as a human then you'll rejoin as a zombie.</li>
+<li>After a certain amount of time has gone by, even new players will spawn as zombies.</li>
+<li>Use TEAM CHAT when needed. The default key is U and allows you to speak to only your team.</li>
 </ul></p>
 ]]
-LANGUAGE.help_cont_survival							= [[<p>팁:
-<ul><li>'gmod_undo'키(기본값: Z)를 눌러 아주 느리게 바리케이드를 통과할 수 있다.</li>
-<li>웨이브가 진행 중일 때, 포인트가 충분하다면 상점 상자에서 원하는 무기와 도구, 탄창 등을 살 수 있다. 그러나 포인트가 적다고 해서 꼭 답이 없는 것은 아닙니다. 동료의 잔해나 맵 구석구석 떨어져 있는 무기, 탄창, 도구 등을 주워서 사용하시면 생존에 도움이 된다.</li>
-<li>만약 인간이 좀비의 직접적인 공격으로 죽는다면, 그 자리에서 좀비로 되살아납니다. 즉시 처치하세요.</li>
-<li>라운드 시작 전 주어지는 자금은 매우 적다. 신중히 시작 무기를 고르시기 바랍니다.</li>
-<li>F2를 눌러 장바구니를 만들거나, 저장하거나, 불러오거나, 삭제하거나, 기본 장바구니로 설정할 수 있다. 이렇게 장바구니로 등록한 후 구매하면 엄청나게 많은 시간을 절약하여 전략을 짤 수 있다.</li>
-<li>안전하다고 느껴지는 장소일수록 조심하세요. 좀비가 파놓은 함정에 걸릴 수도 있다.</li>
-<li>만약 팀을 위해 아무것도 하지 않는다면, 팀에게 당신은 아무런 쓸모없는 존재가 된다. 포인트를 얻지 않거나, 더 좋은 무기를 구매하지 않는다면, 팀은 물론이고 여러분 자신에게도 필요 없는 존재가 되죠!</li>
-<li>'sprint'키(기본값: Shift)를 눌러 설치한 여러 물건을 회수할 수 있다. 회수한 물건들은 나중에 다시 사용할 수 있다.</li>
-<li>주인이 없는 터렛(파란 불빛)은 'use'키(기본값: E)를 눌러 자신의 것으로 다시 사용할 수 있다. 주인이 없는 터렛은 아무런 행동도 하지 않으므로 최대한 빨리 사용하세요!</li>
-<li>못이 박혀 있지 않은 프롭은 아무리 무거워도 쓸모가 없다. 반드시 못을 박아서 바리케이드를 완성하세요.</li>
-<li>충분히 데미지를 가하면 문도 부서집니다. 단, 열리고 닫히는 문일 경우에만 적용된다.</li>
-<li>대부분의 프롭들은 데미지를 받을수록 빨갛게 변한다.</li>
-<li>좀비들은 주변에 자신들을 쳐다보는 인간이 없으면 서로의 머리 위에서 부활할 수 있다.</li>
-<li>대부분의 근접 무기들은 좀비의 팔보다 긴 사정거리를 갖고 있다. 바리케이드를 지어 방어할 때 이를 고려해 지으면 좋다.</li>
-<li>같은 팀끼리는 겹치지도, 데미지를 주지도 않으며 공격이 그대로 통과한다.</li>
-<li>바리케이드를 안전한 장소에, 그리고 좀비 스폰 지점에서 멀리 떨어진 장소에 지으세요. 좀비들의 팔은 짧지만, 총의 사정거리는 매우 깁니다.</li>
-<li>독 데미지는 천천히 회복되지만, 그렇다고 해서 죽지 않는 건 아닙니다. 조심하세요.</li>
-<li>팀 멤버가 죽어간다고 겁먹지 마세요! 좀비들은 겁쟁이를 아주 좋아한다!</li>
-<li>좀비들은 인간이 벽 뒤에 있을지라도 그 인간의 상태를 볼 수 있다. 많이 다친 상태라면 좀비가 달려들기 전에 얼른 후퇴하세요.</li>
-<li>숨지 말고 방어선을 구축하세요. 좀비들은 인간이 어디에 있든지 볼 수 있다.</li>
-<li>저항력 표시기는 현재 넉백에 대해 얼마나 저항력을 갖고 있는지 표시한다. 좀비들이 많으면 많을수록 저항력이 강해집니다!</li>
-<li>바리케이드를 부술 만큼 좀비가 많지 않다면, 다른 장소에서 '팀원'을 구해보세요.</li>
-<li>초록색 가스에 있는 좀비를 쏘지 마세요! 가스 안에서 좀비는 빠르게 회복하므로 아까운 총알만 낭비하게 된다!</li>
-<li>좀비는 몸통, 팔, 다리에 가해지는 공격에 내성이 있다. 머리를 정화하게 쏘세요!</li>
-<li>비록 좀비의 다리에 데미지가 적게 들어갈지라도, 다리에 공격을 받으면 느려지는 효과가 있다. 위급한 상황이라면, 다리를 집중 사격하고 팀원과 함께 도망치세요.</li>
+LANGUAGE.help_cont_survival							= [[<p>Tips for this section:
+<ul><li>Holding the ZOOM key (default: Z) allows you to move freely through barricades while walking extremely slow.</li>
+<li>You can only buy more items such as weapons and ammo during wave breaks but you can also loot ammunition, weapons, and tools from fallen comrades.</li>
+<li>If a human is directly killed by a zombie then they will rise again wherever they stand. Make sure you end their misery before they give you any.</li>
+<li>You're only given a certain amount of Worth to play with so think carefully what you should get!</li>
+<li>You can create, save, load, delete, and mark as default carts by pressing F2. This saves a ton of time which could be better spent setting up barricades or creating game plans.</li>
+<li>A spot that feels safe one moment may be a death trap with more or different types of zombies roaming around. Always allow extra space and a "Plan B" if things get ugly.</li>
+<li>You're useless to your team if you're not doing anything to help. You're even more useless to yourself since you're not getting any points or bigger weapons!</li>
+<li>By holding your SPRINT key for about ten seconds while looking at deployed objects that you own, you can pack them up for later use.</li>
+<li>Turrets without owners (a blue light) can be claimed by pressing USE on them. Ownerless turrets will not scan for targets!</li>
+<li>Props that aren't nailed to something don't make very good barricades unless they're really heavy.</li>
+<li>With enough punishment, doors can be thrown off their hinges.</li>
+<li>Most props will become red with more and more damage.</li>
+<li>Zombies can spawn on top of each other if no humans are around to witness it.</li>
+<li>Most melee weapons have a longer reach than zombie claws. Use this to your advantage if you insist on defending with a melee weapon.</li>
+<li>Players on the same team do not damage or collide with each other and can freely shoot and swing through each other.</li>
+<li>Make sure you use a barricade to your advantage and stay behind it a good distance away from the zombies. Guns have an infinite range, zombie claws do not.</li>
+<li>Poison damage will heal over time but enough of it can still kill you.</li>
+<li>Your team members aren't always right, don't be a sheep! Zombies like to kill sheep.</li>
+<li>Zombies can see your health, even through walls. Make sure to fall back when hurt as zombies will most likely try to pick you off.</li>
+<li>Don't hide, zombies can sense you through walls and in complete darkness.</li>
+<li>The Horde Meter at the bottom of the screen indicates how much of a damage and knockback resistance you have. Huddle up with other zombies for a big resistance when taking down strongholds!</li>
+<li>If you don't have enough zombies to take down a barricade, try hunting for new "team mates" elsewhere.</li>
+<li>Don't shoot zombies in the green gas! It quickly heals them and you're only wasting ammunition!</li>
+<li>Zombies are resistant to damage in the chest and even more so in the arms and legs. Make sure you're aiming for the head as some zombies have the ability to get up again if you don't!</li>
+<li>Although zombies take less damage in the legs, shooting them there will slow them down for a short time, enough to allow you or a team member to escape.</li>
+</ul></p>
+]]
+LANGUAGE.help_cont_barricading						= [[<p>Barricading is an extremely important part of survival. It may seem like the undead aren't a threat early on but eventually they'll be powerful enough to kill your entire team in a few seconds.</p>
+
+<p>The only thing keeping the zombies out is a well-built and well-maintained barricade.</p>
+
+<p>There are a couple of tools that give you the ability to set this up. The one most useful tool is the hammer and nails. This allows you to nail down props which then must have the nails destroyed in order for the zombies to get to you.
+Position the prop you want to nail by pressing USE on it to pick it up. You can hold SPRINT while holding it to lock it in place. Then take your hammer and right click where you want the nail to go. It's a good idea to nail the prop to a sturdy object such as a wall instead of other props.
+Remember, when a prop is nailed it will forward the damage it takes to the nails themselves. You can repair nails by hitting them with the hammer but eventually they'll become too damaged to repair anymore. You can hold SHIFT with the hammer out to get a view of every single nail deployed on your screen as well as the owner.
+If you think a nail is in a bad place or you'd like to reposition a prop, you can remove nails by pointing at it and pressing RELOAD. Be warned, if you take a nail that doesn't belong to you then you will be given a point penalty.
+One more thing to remember: nails take less damage when they're nailed to bigger props. The bigger the size of the prop, the less damage its nails take and the other way around.</p>
+
+<p>One other tool is the 'Aegis' Barricade Kit. This quick-deploying tool allows you to place boards on any surface or deploy them between two walls. It doesn't even need props. To use it, you need to position a board in a spot that is legal. The ghost will turn from red to green to let you know.
+Deploy a board by pressing PRIMARY ATTACK. Rotate the board by using SECONDARY ATTACK and RELOAD. It uses boards for ammunition so boards you have from the Board Pack work as extra ammunition! You can pack up boards you've deployed by pressing SPRINT while pointing at it.</p>
+
+<p>Another tool worth noting is the Turret. This tosses bullets at any zombie that gets in the way of its laser. Its only downside is that it requires ammunition. You can refill ammunition by pressing USE on it. This will give you bonus points for helping the team.
+To deploy the turret, position it in a way so that the ghost is green. It must be on a solid surface (no props!). Rotate the turret with SECONDARY ATTACK and RELOAD. If you mess up, you can always pack the turret back up by pressing SPRINT while pointing at it. Remember, the turret will only fire at zombies that cross its tracking beam.</p>
+
+<p>Tips for this section:
+<ul>
+<li>You get a 25% point bonus for killing zombies that are attacking a barricade!</li>
+<li>Use bigger props for barricades. The nails take less damage and the prop has room for more nails. In addition to that, it even acts as cover from projectiles.</li>
+</ul></p>]]
+LANGUAGE.help_cont_upgrades							= [[<p>Points are obtained through killing zombies, healing team mates, and building defenses.
+You can then exchange points in the Points Shop at Arsenal Crates.</p>
+
+<p>Tips for this section:
+<ul>
+<li>Try planning ahead. Buy extra pistol ammunition in the Worth menu so you have plenty to spare once you get your first upgrade.</li>
+<li>You still get points for assists. The greater half of the points goes to the killer and the lesser half goes to the one who assisted in the kill.</li>
+<li>Worth and Points are separate. Make sure you spend all of your Worth!</li>
+<li>Arsenal Crates are extremely valuable and prime targets for zombie attacks.</li>
+</ul></p>]]
+LANGUAGE.help_cont_being_a_zombie					= [[<p>Tips for this section:
+<ul>
+<li>You have an unlimited amount of lives, the humans only have one each. Don't be afraid to attack, attack, attack!</li>
+<li>The regular Zombie class has the ability of durability. The only way to kill you for sure is to get shot in the head or be killed by a melee weapon. You don't need your legs.</li>
+<li>Zombies can spawn on top of each other if no humans are around to see it. Check the eyes of the skull on the bottom of your screen. If they're green then you are a valid spawn point!</li>
+<li>With enough practice, you can use props to slam them in to humans from a distance.</li>
+<li>Destroy deployables such as turrets and especially Arsenal Crates to cripple the humans.</li>
+<li>With enough punishment, doors can be thrown off their hinges.</li>
+<li>Most props will become red with more and more damage.</li>
+<li>The Wraith is completely invisible while standing still or at a distance.</li>
+<li>The Fast Zombie's lunge attack damage scales by how long you're in the air. The more air time you get, the larger the damage. Use your claw attack when in close range!</li>
+<li>In addition to being extremely tough, the Poison Zombie can rip out chunks of its own poison flesh and throw them at humans by pressing SECONDARY ATTACK.</li>
+<li>Most zombie claws have two chances to hit their target. If you "hit" your target when you click your mouse button then you're guaranteed a hit as long as they remain in range.</li>
+<li>The Poison Headcrab's spit projectile can confuse humans if it hits them in the head.</li>
+<li>Go for the humans with low health! Other zombies are also attracted to them so they should be the easiest targets.</li>
+<li>The Horde Meter at the bottom of the screen indicates how much of a damage and knockback resistance you have. Huddle up with other zombies for a big resistance when taking down strongholds!</li>
+<li>If you don't have enough zombies to take down a barricade, try hunting for new "team mates" elsewhere.</li>
+<li>If an area is too dark, try pressing your FLASHLIGHT button to toggle night vision.</li>
 </ul></p>
 ]]
 
-LANGUAGE.help_cont_barricading						= [[<p>바리케이딩은 생존에 절대로 없어서는 안 될 행위이다. 좀비들은 처음엔 약해 보이나 후반으로 갈수록 순식간에 팀 전체를 죽일 수 있을 정도로 강력해지기 때문이다.</p>
-<p>좀비를 들어오지 못하게 하는 유일한 방법은, 잘 지어진 바리케이드와 잘 짜인 전술로 대응하는 것이다.</p>
-<p>좀비 서바이벌엔 바리케이드를 구성하기 위한 한 짝의 도구가 있다. 바로 '목수의 망치'와 '못'이다. 이들은 프롭을 단단히 고정해 주며, 좀비들은 이 튼튼한 바리케이드를 부수지 않고는 당신에게 아무런 위해를 가하지 못한다.
-못 박기를 원하는 프롭을 보고 'USE'키(기본값: E)를 눌러 프롭을 들어 올립니다. 'SPRINT'키(기본값: Shift)를 눌러 판자를 원하는 위치에 붙잡고 있을 수 있다. 그 상태에서 망치를 들고 오른쪽 클릭하여 못을 박아 고정하시면 된다. 다른 프롭들보다 벽이나 쇼파 등 튼튼한 물건에 못을 박으면 더 안전하게 생존할 수 있다.
-단, 기억하세요! 못으로 연결된 프롭들은 모두 동시에 데미지를 받다. 즉, 한 프롭이 데미지를 받으면 그 프롭과 못으로 연결된 모든 프롭들에게 같은 양의 데미지가 들어간다는 겁니다. 여러분은 망치로 프롭이나 못을 수리할 수 있다만, 계속 수리를 하다 보면 결국 너무 너덜너덜해져 사용할 수 없게 된다. 망치를 들고 'SPRINT'키(기본값: Shift)를 눌러서 화면에 보이는 못의 주인과 체력을 확인할 수 있다.
-만약 못이 이상한 곳에 박혔다고 생각되거나, 프롭의 위치를 옮기고 싶으면 못을 'RELOAD'키(기본값: R)을 눌러 뺄 수 있다. 하지만 주의하세요. 만약 자신의 못이 아닌 다른 사람의 못을 제거한다면 포인트가 감소하게 된다.
-또 하나 기억하셔야 할 것이 있다. 못의 체력은 프롭의 질량과 비례한다. 무겁고 큰 프롭일수록 데미지를 더 많이 버텨낼 수 있다.</p>
-<p>'이지스 바리케이드 키트'라는 또다른 도구가 있다. 이 바리케이드 키트는 모든 표면, 혹은 두 개의 벽 사이에 빠른 속도로 바리케이드를 설치할 수 있게 해준다. 심지어 프롭도 필요 없다. 이것을 사용하시려면 원하는 위치에 접근하셔서 빨간색 형체가 초록색이 될 때까지 적절히 조정하신 후 클릭하여 설치하시면 된다.
-'PRIMARY ATTACK'키(기본값: 마우스 왼쪽 클릭)을 눌러 설치할 수 있고, 'RELOAD'(기본값: R)키나 'SECONDARY ATTACK'키(기본값: 마우스 오른쪽 클릭)을 눌러 회전시킬 수 있다. 보드팩과 같이 '보드'를 사용하므로 보드팩을 소지하고 있다면 사용할 때마다 보드가 하나씩 사용된다! 'SPRINT'키(기본값: Shift)를 눌러 설치된 판자를 회수하여 다시 쓸 수 있다.</p>
-<p>마지막으로, '터렛'이 있다. 터렛은 레이져에 닿은 모든 좀비에게 총알을 발사한다. 탄약이 없을 때엔 레이져가 빨간색으로 변하며 기능이 정지된다. SMG탄약이 있다면, 터렛을 보고 'USE'키(기본값: E)를 눌러 충전시킬 수 있다. 충전할 경우에는 포인트를 받다.
-터렛을 놓으시려면 빨간색 형체가 초록색이 되는 위치로 이동하신 후 클릭하시면 된다. 프롭이 없고, 평지여야 한다. 'SECONDARY ATTACK'키(기본값: 마우스 오른쪽 클릭) 혹은 'RELOAD'키(기본값: R)을 눌러 회전시킬 수 있다. 만약 문제가 발생한다면, 'SPRINT'키(기본값: Shift)를 눌러 회수한 후 다른 위치에 설치할 수 있다. 기억하세요. 터렛은 레이져에 닿은 좀비만 공격한다.</p>
-<p>팁:
-<ul>
-<li>바리케이드를 공격중인 좀비를 사살한다면 25%의 포인트 보너스를 받다!</li>
-<li>크고 무거운 프롭을 바리케이드로 사용하세요. 못의 체력이 더 많아지고, 못을 박을 수 있는 자리도 더 많아집니다. 또한, 바리케이드는 발사체도 막다.(Ex: 독)</li>
-</ul></p>]]
-LANGUAGE.help_cont_upgrades							= [[<p>포인트는 좀비를 죽이거나, 팀을 치료하거나, 터렛의 탄환을 충전하거나, 포인트샵을 운영하거나, 보급상자를 설치하거나 바리케이드를 수리함으로써 얻을 수 있다.
-그렇게 얻은 포인트들은 포인트 샵에서 생존에 필요한 무기, 도구 등으로 교환할 수 있다.
-웨이브 쉬는시간에는 할인된 가격으로 판매되니 기억하시기 바랍니다!</p>
-<p>팁:
-<ul>
-<li>계획을 세우세요. 자금 메뉴에서 탄약을 두둑히 챙겨 놓는다면 탄약 걱정 없이 더 많은 좀비를 사살하고 포인트를 얻어 장비를 더욱 더 쉽게 업그레이드 하실 수 있다.</li>
-<li>어시스트만으로도 포인트를 얻을 수 있다. 직접 죽인 사람에게 반 이상의 포인트가 가지만, 어시스터도 여전히 포인트를 받으므로 최대한 협력하세요.</li>
-<li>자금과 포인트는 같은 개념이 아닙니다. 라운드 시작 전, 자금을 전부 쓰는 것이 좋다!</li>
-<li>상점 상자는 공격, 방어, 생존 모든 면에 있어 필수품이다.</li>
-</ul></p>]]
-LANGUAGE.help_cont_being_a_zombie					= [[<p>팁:
-<ul>
-<li>좀비는 무한히 부활하지만, 인간은 단 하나의 생명밖에 없다. 공격을 두려워하지 마세요! 끊임없이 공격만 하다 보면 어느새 더욱 강력해진 좀비 군단을 볼 수 있을 겁니다!</li>
-<li>좀비는 굉장히 끈질긴 생명력을 갖고 있다. 죽일 수 있는 단 하나의 방법은 머리를 쏴죽이거나, 강력한 데미지를 가하거나, 근접 공격을 하는 것 뿐이다. 좀비에게 다리는 필요 없다.</li>
-<li>근처의 아무런 인간도 좀비를 보고 있지 않다면, 좀비들은 서로의 머리 위에서 부활할 수 있다. 화면 아래에 있는 해골의 눈 색깔을 주시하세요. 초록색이라면, 다른 좀비가 당신의 위에서 부활할 수 있다!</li>
-<li>많이 시도하다 보면 프롭을 강타해 인간에게 날려버릴 수도 있다.</li>
-<li>상점 상자나 터렛과 같은 설치된 물건들을 부숴서 인간의 생존을 방해하세요.</li>
-<li>충분한 데미지를 받으면 문의 경첩이 떨어집니다.</li>
-<li>대부분의 프롭들은 데미지를 받을수록 빨갛게 변한다.</li>
-<li>망령은 가만히 서 있거나 일정 거리보다 멀리 있을 때 완벽하게 투명해집니다.</li>
-<li>패스트 좀비의 달려드는 공격은 얼마나 오래 날았는지에 따라 데미지가 변한다. 공중에 오래 있었을수록 데미지가 강력해집니다. 만약 인간이 가까이에 있다면, 긁어버려도 좋다!</li>
-<li>포이즌 좀비는 터프하게도 자신의 살점을 뜯어 던져버립니다. 이는 'SECONDARY ATTACK'키(기본값: 마우스 오른쪽 클릭)로 사용할 수 있다.</li>
-<li>대부분 좀비의 할퀴기 공격은 2번의 기회가 있다. 만약 인간을 제대로 친다면 공격 범위 안에서 계속 공격할 수 있다.</li>
-<li>만약 포이즌 헤드크랩의 독 공격이 인가의 머리에 맞는다면 맞은 인간은 몇 초 동안 정신이 없게 된다.</li>
-<li>체력이 부족한 인간에게 가세요! 다른 좀비 역시 체력이 부족한 인간을 선호하므로 그들은 아주 손쉬운 먹잇감이 된다.</li>
-<li>화면 하단에 있는 저항력 미터기는 당신이 데미지와 넉백에 얼마나 저항할 수 있는지 나타냅니다. 좀비끼리 모이고 모여 강력한 군단을 만드세요!</li>
-<li>만약 바리케이드를 부술만큼 좀비가 많지 않다면, 다른 곳에서 새로운 '팀원'을 구하세요.</li>
-<li>만약 너무 어둡다면, 'FLASHLIGHT'키(기본: F)를 눌러보세요.</li>
-</ul></p>
-]]
+-- Place any custom stuff below here...
